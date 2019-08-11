@@ -6,7 +6,9 @@
 	"scripts": {
 		"lint": "eslint .",
 		"pretest": "npm run lint",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"tests-only": "node test",
+		"test": "npm run tests-only",
+		"posttest": "npx aud"
 	},
 	"repository": {
 		"type": "git",
@@ -28,7 +30,11 @@
 	"homepage": "https://github.com/ljharb/unbox-primitive#readme",
 	"devDependencies": {
 		"@ljharb/eslint-config": "^14.0.2",
-		"eslint": "^6.1.0"
+		"eslint": "^6.1.0",
+		"for-each": "^0.3.3",
+		"object-inspect": "^1.6.0",
+		"object-is": "^1.0.1",
+		"tape": "^4.11.0"
 	},
 	"dependencies": {
 		"function-bind": "^1.1.1",
