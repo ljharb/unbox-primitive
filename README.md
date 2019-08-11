@@ -31,8 +31,8 @@ Simply clone the repo, `npm install`, and run `npm test`
 
 [1]: https://npmjs.org/package/unbox-primitive
 [2]: http://versionbadg.es/ljharb/unbox-primitive.svg
-[3]: https://travis-ci.org/ljharb/unbox-primitive.svg
-[4]: https://travis-ci.org/ljharb/unbox-primitive
+[3]: https://travis-ci.com/ljharb/unbox-primitive.svg
+[4]: https://travis-ci.com/ljharb/unbox-primitive
 [5]: https://david-dm.org/ljharb/unbox-primitive.svg
 [6]: https://david-dm.org/ljharb/unbox-primitive
 [7]: https://david-dm.org/ljharb/unbox-primitive/dev-status.svg
