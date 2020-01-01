@@ -49,7 +49,7 @@
 	"dependencies": {
 		"function-bind": "^1.1.1",
 		"has-bigints": "^1.0.0",
-		"has-symbols": "^1.0.0",
+		"has-symbols": "^1.0.1",
 		"which-boxed-primitive": "^1.0.1"
 	},
 	"auto-changelog": {
