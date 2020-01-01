@@ -10,7 +10,9 @@
 		"pretest": "npm run lint",
 		"tests-only": "node test",
 		"test": "npm run tests-only",
-		"posttest": "npx aud"
+		"posttest": "npx aud",
+		"version": "auto-changelog && git add CHANGELOG.md",
+		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
 	},
 	"repository": {
 		"type": "git",
@@ -35,7 +37,7 @@
 	"homepage": "https://github.com/ljharb/unbox-primitive#readme",
 	"devDependencies": {
 		"@ljharb/eslint-config": "^14.0.2",
-		"auto-changelog": "^1.14.1",
+		"auto-changelog": "^1.16.2",
 		"eslint": "^6.1.0",
 		"for-each": "^0.3.3",
 		"in-publish": "^2.0.0",
@@ -51,8 +53,10 @@
 		"which-boxed-primitive": "^1.0.1"
 	},
 	"auto-changelog": {
-		"backfillLimit": false,
+		"output": "CHANGELOG.md",
+		"template": "keepachangelog",
+		"unreleased": false,
 		"commitLimit": false,
-		"template": "keepachangelog"
+		"backfillLimit": false
 	}
 }
