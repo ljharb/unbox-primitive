@@ -5,7 +5,6 @@
 	"main": "index.js",
 	"scripts": {
 		"prepublish": "not-in-publish || safe-publish-latest",
-		"preversion": "auto-changelog",
 		"lint": "eslint .",
 		"pretest": "npm run lint",
 		"tests-only": "node test",
@@ -38,7 +37,7 @@
 	"devDependencies": {
 		"@ljharb/eslint-config": "^16.0.0",
 		"aud": "^1.1.0",
-		"auto-changelog": "^2.0.0",
+		"auto-changelog": "^2.2.1",
 		"eslint": "^6.8.0",
 		"for-each": "^0.3.3",
 		"in-publish": "^2.0.1",
@@ -58,6 +57,7 @@
 		"template": "keepachangelog",
 		"unreleased": false,
 		"commitLimit": false,
-		"backfillLimit": false
+		"backfillLimit": false,
+		"hideCredit": true
 	}
 }
