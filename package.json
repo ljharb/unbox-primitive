@@ -1,6 +1,6 @@
 {
 	"name": "unbox-primitive",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Unbox a boxed JS primitive value.",
 	"main": "index.js",
 	"scripts": {
