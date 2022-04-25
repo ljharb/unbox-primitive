@@ -50,8 +50,8 @@
 	},
 	"dependencies": {
 		"call-bind": "^1.0.2",
-		"has-bigints": "^1.0.1",
-		"has-symbols": "^1.0.2",
+		"has-bigints": "^1.0.2",
+		"has-symbols": "^1.0.3",
 		"which-boxed-primitive": "^1.0.2"
 	},
 	"auto-changelog": {
