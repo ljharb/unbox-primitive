@@ -11,18 +11,21 @@ var unboxPrimitive = require('..');
 test('primitives', function (t) {
 	forEach([null, undefined], function (nullValue) {
 		t['throws'](
+			// @ts-expect-error
 			function () { unboxPrimitive(nullValue); },
 			TypeError,
 			inspect(nullValue) + ' is not a primitive'
 		);
 	});
 
-	forEach([].concat(
+	// eslint-disable-next-line no-extra-parens
+	forEach(/** @type {typeof v.nonNullPrimitives} */ ([].concat(
+		// @ts-expect-error TS sucks with concat
 		v.nonNullPrimitives,
 		v.zeroes,
 		v.infinities,
 		NaN
-	), function (primitive) {
+	)), function (primitive) {
 		var obj = Object(primitive);
 		t.ok(
 			is(unboxPrimitive(obj), primitive),
@@ -34,18 +37,18 @@ test('primitives', function (t) {
 });
 
 test('objects', function (t) {
-	var objects = [
+	// eslint-disable-next-line no-extra-parens
+	forEach(/** @type {typeof v.objects} */ (/** @type {unknown} */ ([].concat(
+		// @ts-expect-error TS sucks with concat
+		v.objects,
 		{},
 		[],
 		function () {},
 		/a/g,
 		new Date()
-	];
-	forEach([].concat(
-		v.objects,
-		objects
-	), function (object) {
+	))), function (object) {
 		t['throws'](
+			// @ts-expect-error
 			function () { unboxPrimitive(object); },
 			TypeError,
 			inspect(object) + ' is not a primitive'
