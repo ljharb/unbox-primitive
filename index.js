@@ -1,7 +1,7 @@
 'use strict';
 
 var whichBoxedPrimitive = require('which-boxed-primitive');
-var callBound = require('call-bind/callBound');
+var callBound = require('call-bound');
 var hasSymbols = require('has-symbols')();
 var hasBigInts = require('has-bigints')();
 
